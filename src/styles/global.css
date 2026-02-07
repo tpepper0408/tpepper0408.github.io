@@ -154,20 +154,20 @@
   }
 
   /* Tables */
-  table {
+  article table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
     border: 3px solid var(--table-border-strong);
   }
 
-  th,
-  td {
+  article th,
+  article td {
     border: 1px solid var(--table-border);
     padding: 0.6rem 0.8rem;
   }
 
-  th {
+  article th {
     background: var(--table-header-bg);
     font-weight: 700;
     text-transform: uppercase;
