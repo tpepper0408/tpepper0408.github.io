@@ -107,7 +107,7 @@ Edit `astro.config.mjs`:
 
 ```javascript
 export default defineConfig({
-  site: 'https://tpepper0408.github.io',
+  site: 'https://yourusername.github.io',
   // or your custom domain like 'https://pepperheadspace.com'
 });
 ```
@@ -158,7 +158,7 @@ This blog is configured to deploy automatically via GitHub Actions.
 1. Go to your repository Settings → Pages
 2. Set Source to "GitHub Actions"
 3. Push to the `main` branch
-4. Your site will be live at `https://tpepper0408.github.io`
+4. Your site will be live at `https://yourusername.github.io`
 
 ### Netlify (Alternative)
 
