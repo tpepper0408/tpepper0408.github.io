@@ -163,7 +163,7 @@ You can see that the argument is in a valid format because if all the premises a
 
 <br/>
 
-However, there's another version of of events which in my experience is more common...
+However, there's another version of events which in my experience is more common...
 
 <br/>
 
