@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Load IBM Plex fonts */
 
 @layer base {
-  /* Load IBM Plex fonts */
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-  
   :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f5f5f5;
@@ -13,6 +12,13 @@
     --text-secondary: #6b6b6b;
     --border: #e0e0e0;
     --code-bg: #f5f5f5;
+    --code-fg: #0a0a0a;
+    --inline-code-bg: #eef2f7;
+    --inline-code-fg: #111827;
+    --inline-code-border: #d1d5db;
+    --table-border-strong: #111827;
+    --table-border: #374151;
+    --table-header-bg: #e5e7eb;
   }
   
   .dark {
@@ -22,6 +28,13 @@
     --text-secondary: #a0a0a0;
     --border: #2a2a2a;
     --code-bg: #1a1a1a;
+    --code-fg: #e5e7eb;
+    --inline-code-bg: #0f172a;
+    --inline-code-fg: #e5e7eb;
+    --inline-code-border: #334155;
+    --table-border-strong: #d1d5db;
+    --table-border: #6b7280;
+    --table-header-bg: #0f172a;
   }
   
   html {
@@ -65,15 +78,19 @@
     @apply rounded-lg p-4 overflow-x-auto border;
     background-color: var(--code-bg) !important;
     border-color: var(--border);
+    color: var(--code-fg);
   }
   
   code {
     @apply font-mono text-sm;
+    color: var(--code-fg);
   }
   
   :not(pre) > code {
-    @apply px-1.5 py-0.5 rounded text-accent-cyan;
-    background-color: var(--code-bg);
+    @apply px-1.5 py-0.5 rounded;
+    background-color: var(--inline-code-bg);
+    border: 1px solid var(--inline-code-border);
+    color: var(--inline-code-fg);
   }
   
   /* Links */
@@ -99,6 +116,17 @@
   article h2 { @apply text-3xl; }
   article h3 { @apply text-2xl; }
   article h4 { @apply text-xl; }
+
+  /* Emphasis styles */
+  article strong,
+  article em {
+    @apply text-accent-orange;
+  }
+
+  .dark article strong,
+  .dark article em {
+    @apply text-accent-cyan;
+  }
   
   /* Blockquotes */
   article blockquote {
@@ -123,6 +151,28 @@
   
   article ol {
     @apply list-decimal;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border: 3px solid var(--table-border-strong);
+  }
+
+  th,
+  td {
+    border: 1px solid var(--table-border);
+    padding: 0.6rem 0.8rem;
+  }
+
+  th {
+    background: var(--table-header-bg);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-align: left;
   }
 }
 
