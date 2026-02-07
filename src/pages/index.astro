@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts and sort by date
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => 
+  new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+);
+---
+
+<BaseLayout title="Pepper Headspace">
+  <!-- Hero Section -->
+  <div class="mb-16">
+    <h1 class="text-6xl font-display font-bold mb-6 leading-tight">
+      Pepper Headspace
+    </h1>
+    <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
+      Reflections on technical leadership, building inclusive teams, and navigating the messy, 
+      rewarding world of software consultancy. Plus the occasional detour into weird tech projects 
+      and life beyond the keyboard.
+    </p>
+  </div>
+
+  <!-- Blog Posts Grid -->
+  <div class="space-y-8">
+    {sortedPosts.map((post) => {
+      const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+      
+      return (
+        <article class="group">
+          <a href={`/blog/${post.slug}`} class="block">
+            <div class="border rounded-lg p-6 hover:border-accent-cyan transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.1)]" style="border-color: var(--border);">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                <h2 class="text-2xl font-display font-semibold group-hover:text-accent-cyan transition-colors">
+                  {post.data.title}
+                </h2>
+                <time 
+                  datetime={post.data.pubDate}
+                  class="font-mono text-sm flex-shrink-0"
+                  style="color: var(--text-secondary);"
+                >
+                  {formattedDate}
+                </time>
+              </div>
+              
+              <p class="mb-4" style="color: var(--text-secondary);">
+                {post.data.description}
+              </p>
+              
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="flex flex-wrap gap-2">
+                  {post.data.tags.map((tag: string) => (
+                    <span class="px-2 py-1 text-xs font-mono rounded border" style="border-color: var(--border); color: var(--text-secondary);">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </a>
+        </article>
+      );
+    })}
+  </div>
+
+  {sortedPosts.length === 0 && (
+    <div class="text-center py-16">
+      <p class="font-mono text-lg" style="color: var(--text-secondary);">
+        <span class="text-accent-cyan">$</span> echo "No posts yet. Start writing!"
+      </p>
+    </div>
+  )}
+</BaseLayout>

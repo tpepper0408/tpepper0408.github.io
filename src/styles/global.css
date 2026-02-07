@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Load IBM Plex fonts */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --text-primary: #0a0a0a;
+    --text-secondary: #6b6b6b;
+    --border: #e0e0e0;
+    --code-bg: #f5f5f5;
+  }
+  
+  .dark {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border: #2a2a2a;
+    --code-bg: #1a1a1a;
+  }
+  
+  html {
+    @apply antialiased;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  body {
+    @apply font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Terminal-style selection */
+  ::selection {
+    @apply bg-accent-cyan text-black;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-cyan;
+  }
+}
+
+@layer components {
+  /* Code blocks styling */
+  pre {
+    @apply rounded-lg p-4 overflow-x-auto border;
+    background-color: var(--code-bg) !important;
+    border-color: var(--border);
+  }
+  
+  code {
+    @apply font-mono text-sm;
+  }
+  
+  :not(pre) > code {
+    @apply px-1.5 py-0.5 rounded text-accent-cyan;
+    background-color: var(--code-bg);
+  }
+  
+  /* Links */
+  a {
+    @apply transition-colors duration-200;
+  }
+  
+  article a {
+    @apply underline decoration-accent-cyan decoration-2 underline-offset-4;
+    @apply hover:text-accent-cyan;
+  }
+  
+  /* Headings in articles */
+  article h1,
+  article h2,
+  article h3,
+  article h4 {
+    @apply font-display font-semibold;
+    @apply border-l-4 border-accent-cyan pl-4 my-6;
+  }
+  
+  article h1 { @apply text-4xl; }
+  article h2 { @apply text-3xl; }
+  article h3 { @apply text-2xl; }
+  article h4 { @apply text-xl; }
+  
+  /* Blockquotes */
+  article blockquote {
+    @apply border-l-4 border-accent-orange pl-4 py-2 italic;
+    color: var(--text-secondary);
+  }
+  
+  /* Lists */
+  article ul,
+  article ol {
+    @apply ml-6 my-4 space-y-2;
+  }
+  
+  article ul {
+    @apply list-none;
+  }
+  
+  article ul li::before {
+    content: "▹";
+    @apply text-accent-cyan mr-2 font-bold;
+  }
+  
+  article ol {
+    @apply list-decimal;
+  }
+}
+
+@layer utilities {
+  .terminal-border {
+    @apply border border-accent-cyan shadow-[0_0_10px_rgba(0,255,255,0.3)];
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  .grid-bg {
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}

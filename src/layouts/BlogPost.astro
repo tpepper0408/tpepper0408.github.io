@@ -1,0 +1,86 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose-custom">
+    <!-- Terminal-style header -->
+    <div class="mb-12">
+      <div class="font-mono text-sm mb-4" style="color: var(--text-secondary);">
+        <span class="text-accent-cyan">cat</span> {frontmatter.slug}.md
+      </div>
+      
+      <h1 class="text-5xl font-display font-bold mb-4 leading-tight">
+        {frontmatter.title}
+      </h1>
+      
+      <div class="flex flex-wrap gap-4 items-center text-sm font-mono" style="color: var(--text-secondary);">
+        <time datetime={frontmatter.pubDate}>
+          {formattedDate}
+        </time>
+        
+        {frontmatter.tags && (
+          <div class="flex gap-2">
+            {frontmatter.tags.map((tag: string) => (
+              <a 
+                href={`/tags/${tag}`}
+                class="px-2 py-1 rounded border hover:border-accent-cyan hover:text-accent-cyan transition-colors"
+                style="border-color: var(--border);"
+              >
+                #{tag}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Horizontal rule with accent -->
+    <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-12 opacity-30"></div>
+
+    <!-- Article content -->
+    <div class="article-content">
+      <slot />
+    </div>
+
+    <!-- Back to posts link -->
+    <div class="mt-16 pt-8 border-t" style="border-color: var(--border);">
+      <a 
+        href="/"
+        class="inline-flex items-center gap-2 font-mono text-sm hover:text-accent-cyan transition-colors"
+      >
+        <span class="text-accent-cyan">←</span>
+        cd ../posts
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-content {
+    @apply leading-relaxed;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  
+  .article-content p {
+    @apply mb-6;
+  }
+  
+  .article-content img {
+    @apply rounded-lg border my-8;
+    border-color: var(--border);
+  }
+  
+  .article-content hr {
+    @apply my-8 border-0 h-px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+  }
+</style>
