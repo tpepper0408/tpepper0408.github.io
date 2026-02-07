@@ -24,8 +24,8 @@ A thoughtful, personal blog exploring technical leadership, inclusive team build
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/tpepper0408/pepper-headspace.github.io.git
-cd pepper-headspace.github.io
+git clone git@github.com:tpepper0408/tpepper0408.github.io.git
+cd tpepper0408.github.io
 ```
 
 2. Install dependencies:
@@ -107,7 +107,7 @@ Edit `astro.config.mjs`:
 
 ```javascript
 export default defineConfig({
-  site: 'https://pepper-headspace.github.io',
+  site: 'https://tpepper0408.github.io',
   // or your custom domain like 'https://pepperheadspace.com'
 });
 ```
@@ -158,7 +158,7 @@ This blog is configured to deploy automatically via GitHub Actions.
 1. Go to your repository Settings → Pages
 2. Set Source to "GitHub Actions"
 3. Push to the `main` branch
-4. Your site will be live at `https://pepper-headspace.github.io`
+4. Your site will be live at `https://tpepper0408.github.io`
 
 ### Netlify (Alternative)
 
