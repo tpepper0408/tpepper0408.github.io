@@ -2,8 +2,8 @@
 layout: ../../layouts/ResourcePage.astro
 title: Claude Project Instructions
 description: Instructions for setting up a Claude project to support a workshop with work experience students.
-backHref: /blog/2026-03-13-work-experience-protoyping
-backLabel: cd ../protoyping-with-16-year-olds
+backHref: /blog/2026-03-13-work-experience-prototyping
+backLabel: cd ../prototyping-with-teenagers
 ---
 
 # Project Instructions
