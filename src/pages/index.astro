@@ -24,7 +24,7 @@ const sortedPosts = allPosts.sort((a, b) =>
   <!-- Blog Posts Grid -->
   <div class="space-y-8">
     {sortedPosts.map((post) => {
-      const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-US', {
+      const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-GB', {
         year: 'numeric',
         month: 'short',
         day: 'numeric'
