@@ -16,9 +16,9 @@ What do I know about 16 year olds? I know that they are likely to have a short a
 
 <br/><br/>
 I landed on:
-1. **An LLM project brief:** A Claude project which was set up to prompt questions about the product they wanted to protoype and resulted in a product specification and a technical specification
+1. **An LLM project brief:** A Claude project which was set up to prompt questions about the product they wanted to prototype and resulted in a product specification and a technical specification
 2. **An MVP slice:** Using Cursor to create something tangible from the project brief, and to show how to iterate on it.
-3. **Whiteboarding:** whilst Cursor did it's thing we talked about what it actually takes to get a product from an idea to the customer's hands, and the different roles that are involved in that process.
+3. **Whiteboarding:** whilst Cursor did its thing we talked about what it actually takes to get a product from an idea to the customer's hands, and the different roles that are involved in that process.
 
 # The project brief
 
@@ -233,7 +233,7 @@ function CreateGroupPage() {
 }
 ```
 
-The best I could do to help them understand this was to change the text visible on screen and show them how to hotload the changes. It felt tangible but it blew their minds beyond the initial excitement of seeing their ideas on the page.
+The best I could do to help them understand this was to change the text visible on screen and show them how to hot reload the changes. It felt tangible but it blew their minds beyond the initial excitement of seeing their ideas on the page.
 
 <br/>
 
@@ -252,7 +252,7 @@ It was also *ugly as sin* which led to a good discussion about the importance of
 I've found when I've used cursor like this before it can end up with functional but ugly results. Claude code is pretty good for getting something a bit more attractive out of a prototype - but I think the main problem was that I didn't actually *ask* cursor to make it look pretty!
 
 ## The limits of AI
-One thing that's clear with 16 year olds is that they are tech-savvy and AI-aware but they have limited exposure to tools outside of a few mainstream things like ChatGPT (massive generalisation I know but bear with me). Thinking about their experience as burgeoning technologists in 2026 makes me feel nostalgic for pulling apart PCs to build something that could play Oblivion without melting whilst chatting on MSN messender to my friends. How time flies!
+One thing that's clear with 16 year olds is that they are tech-savvy and AI-aware but they have limited exposure to tools outside of a few mainstream things like ChatGPT (massive generalisation I know but bear with me). Thinking about their experience as burgeoning technologists in 2026 makes me feel nostalgic for pulling apart PCs to build something that could play Oblivion without melting whilst chatting on MSN messenger to my friends. How time flies!
 
 <br/>
 
