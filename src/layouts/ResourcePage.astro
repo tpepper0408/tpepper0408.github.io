@@ -1,0 +1,81 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Frontmatter {
+  title: string;
+  description?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const {
+  frontmatter,
+} = Astro.props as {
+  frontmatter: Frontmatter;
+};
+
+const {
+  title,
+  description = 'Additional resource',
+  backHref = '/',
+  backLabel = 'cd ../posts',
+} = frontmatter;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="prose-custom">
+    <div class="mb-12">
+      <div class="font-mono text-sm mb-4" style="color: var(--text-secondary);">
+        <span class="text-accent-cyan">cat</span> resource.md
+      </div>
+
+      <h1 class="text-5xl font-display font-bold mb-4 leading-tight">
+        {title}
+      </h1>
+
+      {description && (
+        <p class="text-lg max-w-3xl" style="color: var(--text-secondary);">
+          {description}
+        </p>
+      )}
+    </div>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-12 opacity-30"></div>
+
+    <div class="resource-content">
+      <slot />
+    </div>
+
+    <div class="mt-16 pt-8 border-t" style="border-color: var(--border);">
+      <a
+        href={backHref}
+        class="inline-flex items-center gap-2 font-mono text-sm hover:text-accent-cyan transition-colors"
+      >
+        <span class="text-accent-cyan">←</span>
+        {backLabel}
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .resource-content {
+    @apply leading-relaxed;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  .resource-content p {
+    @apply mb-6;
+  }
+
+  .resource-content img {
+    @apply rounded-lg border my-8;
+    border-color: var(--border);
+  }
+
+  .resource-content hr {
+    @apply my-8 border-0 h-px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+  }
+ </style>
