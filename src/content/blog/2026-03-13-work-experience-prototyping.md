@@ -2,7 +2,7 @@
 title: "Prototyping with teenagers"
 description: "A reflection on the experience of an Introduction To Engineering for work experience students by using prototyping and whiteboarding."
 pubDate: 2026-03-13
-tags: ["ai", "software", "prototyping", "teaching"]
+tags: ["ai", "software-engineering", "prototyping", "teaching"]
 ---
 
 I spent some time this week with some work experience students in sixth form. It was only 2 hours but I was given the task of giving them an *Introduction to Engineering*. Thinking through what to cover and how to cover it landed me on a mixture of prototyping and stepping back to cover wider engineering concepts. I thought it would be interesting for others to see how I approached this and what I covered.
