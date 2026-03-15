@@ -44,7 +44,7 @@ I had spent days preparing for the possibility of being embarrassed, for feeling
 
 <br/>
 
-I am around code all the time, I read it, I review it, I design it... but somehow I never really write it in a meaningful way. Even when I do it at home, I shortcircuit things with AI tools as it's all I have time for. 
+I am around code all the time, I read it, I review it, I design it... but somehow I never really write it in a meaningful way. Even when I do it at home, I short-circuit things with AI tools as it's all I have time for. 
 
 <br/>
 
