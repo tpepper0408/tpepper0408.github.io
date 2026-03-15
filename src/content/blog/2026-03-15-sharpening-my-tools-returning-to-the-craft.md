@@ -90,7 +90,7 @@ I'm also aware of all the things I've not experienced first-hand while I've been
 
 <br/>
 
-How can I get back to that feeling of code under my fingertips? I want to imagine what I need, think in code and write it without hesitation. I want to just jump in and write code. I want to feel like I'm a craftsman again, not just a designer or manager. Feeling like this is a humbling experience, but it's also exciting in a way - it's like I'm rediscovering the craft of software engineering.
+How can I get back to that feeling of code under my fingertips? I want to imagine what I need, think in code and write it without hesitation. I want to just jump in and write code. I want to feel like I'm a craftsperson again, not just a designer or manager. Feeling like this is a humbling experience, but it's also exciting in a way - it's like I'm rediscovering the craft of software engineering.
 
 <br/>
 
@@ -111,7 +111,7 @@ Writing code yourself is satisfying in a way that designing it isn't. It's a dif
 
 <br/>
 
-I hate to admit it, but my instincts are dulled. I've spent too much time theorising about code but I've lost touch with how things work *in practice*. Debugging, building things, testing its limits and experimenting are all things that I used to do frequently. I don't think you can really understand the tools you have without doing so. The people who build languages, frameworks, IDEs and developer tools are the true craftsmen - how can I understand their thinking better?
+I hate to admit it, but my instincts are dulled. I've spent too much time theorising about code but I've lost touch with how things work *in practice*. Debugging, building things, testing its limits and experimenting are all things that I used to do frequently. I don't think you can really understand the tools you have without doing so. The people who build languages, frameworks, IDEs and developer tools are the true craftspersons - how can I understand their thinking better?
 
 <br/>
 
@@ -119,7 +119,7 @@ But beyond that, technical leadership requires technical depth. You don't need t
 
 <br/>
 
-I don't want to dramatise things, but if I don't do something about it I might as well be any other *manager* that uses buzzwords and doesn't understand them - or is that person who says "I used to be a software engineer" and you think to yourself "why do they act like they don't understand writing code then?"... I really don't want to be them. I want to be the craftsmen leader, if that's even possible!
+I don't want to dramatise things, but if I don't do something about it I might as well be any other *manager* that uses buzzwords and doesn't understand them - or is that person who says "I used to be a software engineer" and you think to yourself "why do they act like they don't understand writing code then?"... I really don't want to be them. I want to be the craftsperson leader, if that's even possible!
 
 # The Experiment
 
@@ -127,7 +127,7 @@ The idea is simple. A blog.
 
 <br/>
 
-Radical idea I know... but the focus is on **sharpening my software engineering toolset and gaining back what I've lost**. I want to revisit old languages and frameworks and see them through new eyes. I want to get hands-on, explore how it feels, and share the pain points along the way. It's an experiment in finding out what sort of software craftsman I am now. How do I get back to my technical core? I want to feel *more technical* while still being a leader. I need to try something to get me there.
+Radical idea I know... but the focus is on **sharpening my software engineering toolset and gaining back what I've lost**. I want to revisit old languages and frameworks and see them through new eyes. I want to get hands-on, explore how it feels, and share the pain points along the way. It's an experiment in finding out what sort of software craftsperson I am now. How do I get back to my technical core? I want to feel *more technical* while still being a leader. I need to try something to get me there.
 
 <br/>
 
@@ -143,7 +143,7 @@ I'll be writing about:
 
 # The Plan
 
-I don’t expect to become the engineer I was ten years ago but I do want to become the kind of technical leader who still knows how to build things like a true craftsman.
+I don’t expect to become the engineer I was ten years ago but I do want to become the kind of technical leader who still knows how to build things like a true craftsperson.
 
 <br/>
 
