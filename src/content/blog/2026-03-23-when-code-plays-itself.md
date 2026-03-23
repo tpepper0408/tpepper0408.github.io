@@ -101,7 +101,7 @@ What does it look like at the bottom? You have code reviewers, testers and maint
 The theme throughout this is - **critical thinking**. If you concentrate on the top and the bottom of the hourglass, the people you need to do that are senior, experienced, critical thinkers. If you send a load of code through the hourglass, you need to have the right people to review it - or you have a new bottleneck. 
 
 # Salting the Ground: Stunting the Talent Pipeline
-The [Lead Dev Engineering Leadership Report 2025](https://leaddev.com/the-engineering-leadership-report-2025) reported that concerns about the impact of generative AI on junior developers entering the tech industry rose to 54% across engineering leaders and that 33% were concerned about what impact it will have on roles available for engineering in the future.
+LeadDev also reported that concerns about the impact of generative AI on junior developers entering the tech industry rose to 54% across engineering leaders and that 33% were concerned about what impact it will have on roles available for engineering in the future.
 
 <br/>
 
@@ -156,7 +156,7 @@ I'm not sure where juniors go in this model, but I think they can be involved in
 
 # Being Played by the Piano
 
-AI code generation has gotten surprisingly good in the last couple of years. I remember the frustration of trying to get Github Copilot to write the code I wanted, fast forward and I can give something like Cursor a document with requirements and it can create a running application for me.
+AI code generation has gotten surprisingly good in the last couple of years. I remember the frustration of trying to get GitHub Copilot to write the code I wanted, fast forward and I can give something like Cursor a document with requirements and it can create a running application for me.
 
 <br/>
 
@@ -164,7 +164,7 @@ I created a quick project with some [work experience students](/blog/2026-03-13-
 
 <br/>
 
-I recently had Github Copilot help me review some of my team's code and it was nitpicky but correct. When I asked it to rewrite some spaghetti code, it did a really good job but also added a *lot* of unnecessary comments. We haven't cracked how to tell it what we need from it yet, and in this interim period it's just giving me more work.
+I recently had GitHub Copilot help me review some of my team's code and it was nitpicky but correct. When I asked it to rewrite some spaghetti code, it did a really good job but also added a *lot* of unnecessary comments. We haven't cracked how to tell it what we need from it yet, and in this interim period it's just giving me more work.
 
 I feel like there's no way around it, if I don't invest the time to understand how to rein in this era of slop I'll just keep trying to make sense of the noise - and player pianos need someone to understand them to make sure they are playing anything coherent. I can't help but feel that AI is playing me as much as I'm playing it.
 

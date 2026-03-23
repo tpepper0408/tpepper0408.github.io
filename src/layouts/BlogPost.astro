@@ -42,11 +42,13 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-GB', 
       </div>
       
       {frontmatter.description && (
-        <p class="mb-4 text-sm font-mono" style="color: var(--text-secondary);">
+        <p class="mt-4 mb-4 text-sm font-mono" style="color: var(--text-secondary);">
           {frontmatter.description}
         </p>
       )}
+      
     </div>
+
 
     <!-- Horizontal rule with accent -->
     <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-12 opacity-30"></div>
