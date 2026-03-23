@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 
 const { frontmatter } = Astro.props;
-const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-GB', {
   year: 'numeric',
   month: 'long',
   day: 'numeric'
@@ -38,6 +38,11 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
               </a>
             ))}
           </div>
+        )}
+        {frontmatter.description && (
+          <p class="mb-4" style="color: var(--text-secondary);">
+                {frontmatter.description}
+          </p>
         )}
       </div>
     </div>
