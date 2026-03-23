@@ -36,7 +36,7 @@ The [Lead Dev Engineering Leadership Report 2025](https://leaddev.com/the-engine
 
 <br/>
 
-The report suggests that AI tooling is being rapidly adopted but productivity gains are being realised whilst concerns about quality and security are rising. It suggests something subtle is happening - we're generating more code but shifting the bottlenecks somewhere else. It's a complex picture that goes to the heart of how I feel about all of this. **Conflicted.**
+The report suggests that AI tooling is being rapidly adopted but productivity gains are not being realised. Concerns about quality and security are rising. It suggests something subtle is happening - we're generating more code but shifting the bottlenecks somewhere else. It's a complex picture that goes to the heart of how I feel about all of this. **Conflicted.**
 
 <br/>
 
@@ -56,7 +56,7 @@ Like a cacophony of player pianos playing different songs - I stand back trying 
   style="float:left; width:min(38%, 280px); margin:0 1.25rem 0.75rem 0;"
 />
 
-I came across [The Cloud Girl](https://www.thecloudgirl.dev/)'s [SDLC Hourglass](https://www.youtube.com/watch?v=VUwZOdhA1bQ) recently and it helped me make sense of the changes I am seeing in my team.
+I came across [Priyanka Vergadia](https://www.thecloudgirl.dev/)'s [SDLC Hourglass](https://www.youtube.com/watch?v=VUwZOdhA1bQ) recently and it helped me make sense of the changes I am seeing in my team.
 
 - The **top** represents the planning and design phase of software development, where requirements are gathered, and the overall architecture is designed. 
 - The **thin middle** represents the implementation phase, where engineers write code to implement the planned features.
@@ -105,11 +105,11 @@ LeadDev also reported that concerns about the impact of generative AI on junior 
 
 <br/>
 
-What happens when you lose the hermeneutic circle of writing code? I think you fundamentally lose one of the main sources of growth and learning for junior engineers. You can read code, but you don't get the same level of understanding as you do when you write it yourself. You don't get the same level of understanding of the system, the design decisions, the trade-offs and the overall architecture. You also don't get the same level of understanding of how to write good code - how to structure it, how to test it, how to maintain it over time.
+What happens when you lose the hermeneutic circle of writing code? I think you fundamentally lose one of the main sources of growth and learning for junior engineers. You can read code, but you don't get the same level of understanding as you do when you write it yourself. You don't get the same level of understanding of the system, the design decisions, the trade-offs and the overall architecture. You also don't get the same level of understanding of how to write good code - how to structure it, how to test it, how to maintain it over time. These are all the elements that make a good engineer and that you learn by doing.
 
 <br/>
 
-If you have a team of player piano players, you have a team of people who are not learning and growing in the same way as they would if they were writing code themselves. They are not developing the same level of critical thinking and problem-solving skills that they would if they were writing code themselves. They are pressing play and hoping for the best.
+If you have a team of player piano players, you have a team of people who are not learning and growing in the same way as they would if they were writing code themselves. They are not developing the same level of critical thinking and problem-solving skills that they would if they were writing code themselves. They are pressing play and hoping for the best. They are not learning the piano.
 
 <br/>
 
@@ -120,7 +120,7 @@ If you don't invest in the planning and design - or crucially think about *how t
 
 <br/>
 
-What happens when the experienced engineers are too busy to deal with the slop? Or when they are fed up of being the blocker to getting features out of the door? They are the difficult one who keeps pushing back on the plucky junior who generated 10 days worth of code in a couple of hours. They are the one who is saying "we need to slow down and do this properly" when everyone else is saying "look at all this code we have, we can ship it now". It's not comfortable being that person, and it goes against the very messaging that stakeholders might have heard about the benefits of AI code generation.
+What happens when the experienced engineers are too busy to deal with the slop? Or when they are fed up of being the blocker to getting features out of the door? They become the difficult one who keeps pushing back on the plucky junior who generated 10 days worth of code in a couple of hours. They are the one who is saying "we need to slow down and do this properly" when everyone else is saying "look at all this code we have, we can ship it now". It's not comfortable being that person, and it goes against the very messaging that stakeholders might have heard about the benefits of AI code generation.
 
 <br/>
 
@@ -175,9 +175,3 @@ Maybe the craft of engineering isn't disappearing, it's changing. I'm going from
 <br/>
 
 Well... back to practicing... the part that AI can't do for me.
-
-<br/><br/>
-
-<hr/>
-
-This post is part of the [Return to Engineering](/tags/return-to-engineering) series, where I share my journey of returning to hands-on software engineering.
