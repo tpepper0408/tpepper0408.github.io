@@ -64,7 +64,7 @@ I came across [The Cloud Girl](https://www.thecloudgirl.dev/)'s [SDLC Hourglass]
 
 The middle is so thin now because AI code generation tools can go so quickly that it feels like the coding phase is almost instantaneous. It *used to be slower* and that brought some value.
 
-When you developed slowly, you could question requirements, think about how to test it, work through the low-level design and ensure it matched the current codebase and previous decision. I really believe that writing code is an iterative reading, intepreting, adjusting and refining process that produces deep understanding. Diving deep means sometimes you challenge back on some assumptions made, or alternatively you plug gaps in analysis and design to make pragmatic decisions. You also learn and come to understand the system more deeply so that you can feed back into the overall product.
+When you developed slowly, you could question requirements, think about how to test it, work through the low-level design and ensure it matched the current codebase and previous decision. I really believe that writing code is an iterative reading, interpreting, adjusting and refining process that produces deep understanding. Diving deep means sometimes you challenge back on some assumptions made, or alternatively you plug gaps in analysis and design to make pragmatic decisions. You also learn and come to understand the system more deeply so that you can feed back into the overall product.
 
 <br/>
 
@@ -141,7 +141,7 @@ Maybe we need to think about the sorts of team that would fit into this hourglas
 A team might look more like this:
 - **Context shapers (Top):** people that focus on requirements gathering, constraints and clarity. They are responsible for ensuring the context that an AI code generator works within is well defined.
 - **AI-assisted builders (Middle):** experts in the codebase and the prompts needed to get the right code out of the code generation. They are responsible for ensuring the code generated is of high quality and meets the requirements.
-- **Validators (Bottom):** people with deep engineering experience that can review the code and check for it's maintainability, security and overall quality.
+- **Validators (Bottom):** people with deep engineering experience that can review the code and check for its maintainability, security and overall quality.
 - **Feedback loopers (Alongside):** people that focus on documentation and knowledge sharing and feed that back into the context shapers and builders to ensure that the AI code generation is improving over time and that the context is evolving with the codebase.
 
 The experience level in that sort of team is high, and it has fewer people in the *doers* category than a traditional agile team. It's a different skillset than what I'm used to, but I don't think we can get past the idea that *critical thinking* is needed throughout the AI SDLC. The team hasn't shrunk, the roles needed have stretched to the top and bottom of the hourglass.
