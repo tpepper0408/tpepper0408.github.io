@@ -28,7 +28,7 @@ What if your very livelihood depended on playing that instrument - and now it's 
 
 <br/>
 
-When I'm using AI code generation, I can create something pretty good without much effort on my part - but I don't trust it. It looks about right but I need spend time unpicking what it's done, what choices it has made, and whether they are good choices. The good thing is that I can ask it what the code means, but I can't ask it *why* it has written the code in the way it has - it isn't a human. It's very tempting to use codegen to get code out the door, especially when I'm coming back to hands-on engineering - but it presents a different set of challenges and feels very different to writing code myself.
+When I'm using AI code generation, I can create something pretty good without much effort on my part - but I don't trust it. It looks about right but I need to spend time unpicking what it's done, what choices it has made, and whether they are good choices. The good thing is that I can ask it what the code means, but I can't ask it *why* it has written the code in the way it has - it isn't a human. It's very tempting to use codegen to get code out the door, especially when I'm coming back to hands-on engineering - but it presents a different set of challenges and feels very different to writing code myself.
 
 ## What Leaders Are Experiencing
 
