@@ -1,77 +1,123 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import profilePhoto from '../assets/images/profile.jpg';
 
-// Get all blog posts and sort by date
 const allPosts = await getCollection('blog');
-const sortedPosts = allPosts.sort((a, b) => 
-  new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-);
+const latestPosts = allPosts
+  .sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf())
+  .slice(0, 3);
 ---
 
 <BaseLayout title="Pepper Headspace">
-  <!-- Hero Section -->
+
+  <!-- Headline / Short Intro -->
   <div class="mb-16">
-    <h1 class="text-6xl font-display font-bold mb-6 leading-tight">
-      Pepper Headspace
+    <h1 class="text-5xl font-display font-bold mb-4 leading-tight">
+      Tim Pepper
     </h1>
+    <p class="text-2xl font-display font-semibold mb-6" style="color: var(--text-secondary);">
+      Engineering Leader | Inclusive Teams, Practical Software
+    </p>
     <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
-      Reflections on technical leadership, building inclusive teams, and navigating the messy, 
-      rewarding world of software consultancy. Plus the occasional detour into life beyond the keyboard.
+      Reflections on returning to hands-on software engineering after years in technical leadership, building inclusive teams, plus the occasional detour into life beyond the keyboard.
     </p>
   </div>
 
-  <!-- Blog Posts Grid -->
-  <div class="space-y-8">
-    {sortedPosts.map((post) => {
-      const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-GB', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      });
-      
-      return (
-        <article class="group">
-          <a href={`/blog/${post.slug}`} class="block">
-            <div class="border rounded-lg p-6 hover:border-accent-cyan transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.1)]" style="border-color: var(--border);">
-              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                <h2 class="text-2xl font-display font-semibold group-hover:text-accent-cyan transition-colors">
-                  {post.data.title}
-                </h2>
-                <time 
-                  datetime={post.data.pubDate.toISOString()}
-                  class="font-mono text-sm flex-shrink-0"
-                  style="color: var(--text-secondary);"
-                >
-                  {formattedDate}
-                </time>
-              </div>
-              
-              <p class="mb-4" style="color: var(--text-secondary);">
-                {post.data.description}
-              </p>
-              
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="flex flex-wrap gap-2">
-                  {post.data.tags.map((tag: string) => (
-                    <span class="px-2 py-1 text-xs font-mono rounded border" style="border-color: var(--border); color: var(--text-secondary);">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-          </a>
-        </article>
-      );
-    })}
+  <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-16 opacity-30"></div>
+
+  <!-- Featured Series -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-display font-semibold mb-6">Featured Series</h2>
+    <div class="border rounded-lg p-6" style="border-color: var(--border);">
+      <h3 class="text-2xl font-display font-semibold mb-3 text-accent-cyan">
+        Return to Engineering
+      </h3>
+      <p class="mb-4 leading-relaxed" style="color: var(--text-secondary);">
+        After years in technical leadership, I'm getting hands-on again. This series follows my journey back to the craft — the rust, the relearning, and the rediscovery of what it actually means to build software.
+      </p>
+      <a href="/tags/return-to-engineering" class="font-mono text-sm text-accent-cyan hover:underline">
+        View series →
+      </a>
+    </div>
   </div>
 
-  {sortedPosts.length === 0 && (
-    <div class="text-center py-16">
-      <p class="font-mono text-lg" style="color: var(--text-secondary);">
-        <span class="text-accent-cyan">$</span> echo "No posts yet. Start writing!"
-      </p>
+  <!-- Latest Posts -->
+  <div class="mb-16">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-3xl font-display font-semibold">Latest Posts</h2>
+      <a href="/posts" class="font-mono text-sm text-accent-cyan hover:underline">View all →</a>
     </div>
-  )}
+    <div class="space-y-6">
+      {latestPosts.map((post) => {
+        const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-GB', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        });
+        return (
+          <article class="group">
+            <a href={`/blog/${post.slug}`} class="block">
+              <div class="border rounded-lg p-6 hover:border-accent-cyan hover-accent-glow transition-all duration-300" style="border-color: var(--border);">
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                  <h3 class="text-xl font-display font-semibold group-hover:text-accent-cyan transition-colors">
+                    {post.data.title}
+                  </h3>
+                  <time
+                    datetime={post.data.pubDate.toISOString()}
+                    class="font-mono text-sm flex-shrink-0"
+                    style="color: var(--text-secondary);"
+                  >
+                    {formattedDate}
+                  </time>
+                </div>
+                <p style="color: var(--text-secondary);">{post.data.description}</p>
+              </div>
+            </a>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+
+  <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-16 opacity-30"></div>
+
+  <!-- About Me Snippet -->
+  <div class="mb-16">
+    <h2 class="text-3xl font-display font-semibold mb-6">About Me</h2>
+    <div class="flex flex-col sm:flex-row gap-8 items-start">
+      <Image
+        src={profilePhoto}
+        alt="Tim Pepper"
+        width={128}
+        height={128}
+        class="w-32 h-32 rounded-full object-cover flex-shrink-0"
+      />
+      <div class="flex-1">
+        <div class="space-y-2 mb-5 text-lg leading-relaxed" style="color: var(--text-secondary);">
+          <p>Engineering leader with 10+ years in software delivery and technical leadership.</p>
+          <p>Focused on inclusive, high-performing teams and pragmatic, usable software.</p>
+          <p>Board member at WILD Digital; writer, gamer, music and philosophy nerd.</p>
+        </div>
+        <a href="/about" class="font-mono text-sm text-accent-cyan hover:underline">More about me →</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+      <div class="rounded border p-4" style="border-color: var(--border);">
+        <p class="font-mono text-xs mb-1" style="color: var(--text-secondary);">Experience</p>
+        <p class="font-display text-xl font-semibold">10+ years</p>
+      </div>
+      <div class="rounded border p-4" style="border-color: var(--border);">
+        <p class="font-mono text-xs mb-1" style="color: var(--text-secondary);">Focus</p>
+        <p class="font-display text-xl font-semibold">Engineering Leadership</p>
+      </div>
+      <div class="rounded border p-4" style="border-color: var(--border);">
+        <p class="font-mono text-xs mb-1" style="color: var(--text-secondary);">Community</p>
+        <p class="font-display text-xl font-semibold">Board Member @ WILD</p>
+      </div>
+    </div>
+  </div>
+
 </BaseLayout>

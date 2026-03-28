@@ -32,7 +32,7 @@ I piped the specification into a chat tool, generated some BDD features, opened 
 
 <br/>
 
-![An interview where the person writing code is looking nervous while being observed.](/images/sharpening_tools/SharpeningCraftRusty.png)
+![An interview where the person writing code is looking nervous while being observed.](../../assets/images/sharpening_tools/SharpeningCraftRusty.png)
 
 <br/>
 
@@ -105,7 +105,7 @@ I think this is the one thing that scares me the most about the drift - that **I
 
 # Why Craft Matters
 
-![An abstract image showing inspiration in the face of seeing code](/images/sharpening_tools/SharpeningCraftInspiration.png)
+![An abstract image showing inspiration in the face of seeing code](../../assets/images/sharpening_tools/SharpeningCraftInspiration.png)
 
 Writing code yourself is satisfying in a way that designing it isn't. It's a different kind of creativity; there is nothing quite like the feeling of making something and seeing it work. I get a similar feeling from cooking, or pottery - there's nothing quite like using your hands. I want to enjoy that again, I want to get past the theory of DevEx and flow and actually feel it.
 

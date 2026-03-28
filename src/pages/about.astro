@@ -1,24 +1,68 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import profilePhoto from '../assets/images/profile.jpg';
 ---
 
 <BaseLayout title="About">
   <article class="prose-custom">
     <div class="mb-12">
-      <h1 class="text-5xl font-display font-bold mb-8 leading-tight">
-        Hi, I'm Tim
-      </h1>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8 mb-8">
+        <Image
+          src={profilePhoto}
+          alt="Tim Pepper"
+          width={160}
+          height={160}
+          class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover flex-shrink-0 ring-2 ring-accent-cyan/40"
+        />
+        <div>
+          <h1 class="text-5xl font-display font-bold leading-tight mb-3">
+            Hi, I'm Tim
+          </h1>
+          <p class="text-xl" style="color: var(--text-secondary);">
+            Engineering leader building inclusive teams and shipping pragmatic software.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-8">
+        <a href="/posts" class="inline-flex items-center font-mono text-sm px-4 py-2 rounded border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-black transition-colors">
+          Read the posts
+        </a>
+        <a href="#connect" class="inline-flex items-center font-mono text-sm px-4 py-2 rounded border hover:border-accent-cyan hover:text-accent-cyan transition-colors" style="border-color: var(--border);">
+          Let's connect
+        </a>
+      </div>
     </div>
 
     <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-12 opacity-30"></div>
 
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+      <div class="rounded border p-4" style="border-color: var(--border);">
+        <p class="font-mono text-xs mb-1" style="color: var(--text-secondary);">Experience</p>
+        <p class="font-display text-xl font-semibold">10+ years</p>
+      </div>
+      <div class="rounded border p-4" style="border-color: var(--border);">
+        <p class="font-mono text-xs mb-1" style="color: var(--text-secondary);">Current focus</p>
+        <p class="font-display text-xl font-semibold">Engineering Leadership</p>
+      </div>
+      <div class="rounded border p-4" style="border-color: var(--border);">
+        <p class="font-mono text-xs mb-1" style="color: var(--text-secondary);">Community</p>
+        <p class="font-display text-xl font-semibold">Board Member @ WILD</p>
+      </div>
+    </div>
+
     <div class="space-y-6 text-lg leading-relaxed">
       <p>
-        I'm Tim Pepper - I've worked in software development for over a decade, most recently as a practice lead for software engineering, and in a variety of tech leadership roles in various guises. Expect a (hopefully) insightful mix of tech-y nonsense.
+        I'm Tim Pepper. I've worked in software development for over a decade, most recently as a practice lead for software engineering.
+      </p>
+
+      <p>
+        I write about leadership, engineering practice, and what it looks like to return to hands-on craft after years of leading teams.
       </p>
 
       <h2 class="text-3xl font-display font-semibold border-l-4 border-accent-cyan pl-4 my-8">
-        What I Do
+        How I Help Teams
       </h2>
 
       <p>
@@ -34,7 +78,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
 
       <h2 class="text-3xl font-display font-semibold border-l-4 border-accent-cyan pl-4 my-8">
-        Beyond the Code
+        Community & Inclusion
       </h2>
 
       <p>
@@ -50,7 +94,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
 
       <h2 class="text-3xl font-display font-semibold border-l-4 border-accent-cyan pl-4 my-8">
-        Why This Blog?
+        What You'll Find Here
       </h2>
 
       <p>
@@ -66,7 +110,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         about how this all works, then I'll call that a win.
       </p>
 
-      <h2 class="text-3xl font-display font-semibold border-l-4 border-accent-cyan pl-4 my-8">
+      <h2 id="connect" class="text-3xl font-display font-semibold border-l-4 border-accent-cyan pl-4 my-8">
         Let's Connect
       </h2>
 
@@ -75,22 +119,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         experiences with diversity and inclusion in tech, or just say hi—reach out.
       </p>
 
+      <div class="flex flex-wrap gap-3">
+        <a href="mailto:tim.pepper04@gmail.com" class="inline-flex items-center font-mono text-sm px-4 py-2 rounded border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-black transition-colors">
+          Email me
+        </a>
+        <a href="/posts" class="inline-flex items-center font-mono text-sm px-4 py-2 rounded border hover:border-accent-cyan hover:text-accent-cyan transition-colors" style="border-color: var(--border);">
+          Browse posts
+        </a>
+      </div>
+
       <ul class="space-y-2 ml-6">
         <li class="flex items-start">
-          <span class="text-accent-cyan mr-2">▹</span>
           <span><strong>Email:</strong> <a href="mailto:tim.pepper04@gmail.com" class="underline decoration-accent-cyan decoration-2 underline-offset-4 hover:text-accent-cyan transition-colors">tim.pepper04@gmail.com</a></span>
         </li>
         <li class="flex items-start">
-          <span class="text-accent-cyan mr-2">▹</span>
           <span><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tim-pepper-214370181/" class="underline decoration-accent-cyan decoration-2 underline-offset-4 hover:text-accent-cyan transition-colors">Connect with me</a></span>
         </li>
         <li class="flex items-start">
-          <span class="text-accent-cyan mr-2">▹</span>
           <span><strong>GitHub:</strong> <a href="https://github.com/tpepper0408" class="underline decoration-accent-cyan decoration-2 underline-offset-4 hover:text-accent-cyan transition-colors">See what I'm building</a></span>
         </li>
         <li class="flex items-start">
-          <span class="text-accent-cyan mr-2">▹</span>
-          <span><strong>Women in Digital Leeds:</strong> <a href="https://www.wild-digital.tech//" class="underline decoration-accent-cyan decoration-2 underline-offset-4 hover:text-accent-cyan transition-colors">Learn more about our work at WILD Digital</a></span>
+          <span><strong>WILD Digital (Board Member):</strong> <a href="https://www.wild-digital.tech/" class="underline decoration-accent-cyan decoration-2 underline-offset-4 hover:text-accent-cyan transition-colors">Learn more about our work at WILD Digital</a></span>
         </li>
       </ul>
 

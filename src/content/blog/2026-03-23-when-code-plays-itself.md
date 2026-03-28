@@ -14,7 +14,7 @@ I sat down to write some code recently, and it felt a lot like sitting down at a
 
 A player piano is jarring. You might feel surprised at first, impressed maybe, then probably bored. It's an intricate machine, but it's not anything like playing it yourself or even watching another person play. Live performance has expression, mistakes and intentionality - it's alive. Playing the piano is visceral, playing a player piano is like switching on a washing machine. 
 
-![A player piano producing music and software.](/images/code_plays_itself/PlayerPianoCode.png)
+![A player piano producing music and software.](../../assets/images/code_plays_itself/PlayerPianoCode.png)
 
 <br/>
 
@@ -46,12 +46,12 @@ On one hand, I love that I can create things quickly and test my ideas - create 
 
 Like a cacophony of player pianos playing different songs - I stand back trying to make sense of it but all I hear is noise. How can we make sense of it?
 
-![Many player pianos creating lots of music and code in a chaotic way.](/images/code_plays_itself/PlayerPianoSymphony.png)
+![Many player pianos creating lots of music and code in a chaotic way.](../../assets/images/code_plays_itself/PlayerPianoSymphony.png)
 
 # The Hourglass
 
 <img
-  src="/images/code_plays_itself/PlayerHourglass.png"
+  src="../../assets/images/code_plays_itself/PlayerHourglass.png"
   alt="An hourglass with people planning at the top, someone reviewing a lot of data at the bottom and a thin middle where code and sand pour through"
   style="float:left; width:min(38%, 280px); margin:0 1.25rem 0.75rem 0;"
 />
@@ -132,7 +132,7 @@ Part of this might be nostalgia, but I've seen enough slop recently to believe i
 
 # Orchestrating The Player Piano Players
 
-![An orchestra of player pianos, with a conductor orchestrating them and a giant hourglass in the background.](/images/code_plays_itself/PlayerOrchestra.png)
+![An orchestra of player pianos, with a conductor orchestrating them and a giant hourglass in the background.](../../assets/images/code_plays_itself/PlayerOrchestra.png)
 
 Maybe we need to think about the sorts of team that would fit into this hourglass model. Thinking about what happens when implementation is instantaneous has highlighted, to me, that we hide a lot of sins in the planning phase, and spend some of our implementation time frontloading the verification phase. If we have a team of player piano players, it's more about ensuring they have the right prompts and feedback loops to ensure the music is anything but noise.
 

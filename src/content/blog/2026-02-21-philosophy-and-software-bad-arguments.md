@@ -23,7 +23,7 @@ Be **kind**. Everyone makes mistakes, and everyone should be healthily challenge
 
 ## Invalid Arguments
 ### Jumping to a conclusion
-![An image of a figure jumping over a chasm with a lightbulb, ignoring the evidence around them.](/images/InvalidArgumentConclusionJump.png)
+![An image of a figure jumping over a chasm with a lightbulb, ignoring the evidence around them.](../../assets/images/InvalidArgumentConclusionJump.png)
 <br/>
 
 Can you spot the problem with this argument? 
@@ -66,7 +66,7 @@ I've seen it happen time and again; when I worked on a support team a few years 
 If you spot this error in logic, you should establish whether the information at hand is evidence for the conclusion. Are there any other explanations for the evidence you're seeing? In our database example, there's so many different reasons a 500 error could occur, just because you can see the symptoms of something doesn't mean you know the cause. You need to find evidence up the chain to support your theory on the root cause of the problem - find more evidence until you're confident you can make a valid argument.
 
 ### Getting your booleans mixed up
-![A figure with a confused expression, surrounded by question marks, trying to untangle a knot of negations.](/images/InvalidArgumentConfusion.png)
+![A figure with a confused expression, surrounded by question marks, trying to untangle a knot of negations.](../../assets/images/InvalidArgumentConfusion.png)
 <br/>
 Arguments get more complicated when you start to include negations. In the previous examples, the arguments are valid when your Ps or Qs are true. As with the best applications, sometimes you can put a ! in the wrong place and screw up the whole thing. 
 
@@ -96,7 +96,7 @@ This is a common mistake, so be careful when you’re working with negations. If
 There’s a plethora of errors to make; let’s go through some other common fallacies you could come across that are less *formal*. These are usually used as tactics (deliberately or unconsciously) that people can use to convince others when their arguments are bad. They're not necessarily invalid arguments, but...
 
 ### Fallacy fallacy
-![A figure pointing out a logical fallacy, while the conclusion is actually correct.](/images/InvalidArgumentFallacyFallacy.png)
+![A figure pointing out a logical fallacy, while the conclusion is actually correct.](../../assets/images/InvalidArgumentFallacyFallacy.png)
 <br/>
 Be careful; just because somebody commits an error in logic doesn’t mean their conclusion is false.
 
@@ -113,7 +113,7 @@ Be humble and assess statements on their truth independently.
 Just because you're a smarty-pants and you know what a bad argument looks like doesn't mean what the person is saying is false. Even if they arrive at a conclusion in an illogical way, what they're saying could be true. Take the conclusion as something that needs to be independently verified as much as the premises that someone makes; just because someone argues badly doesn't mean they're wrong. Being right in the wrong way is something that some people excel at.
 
 ### Authority
-![A figure standing on a pedestal labeled 'Authority', trying to convince others with their elevated status.](/images/InvalidArgumentAuthority.png)
+![A figure standing on a pedestal labeled 'Authority', trying to convince others with their elevated status.](../../assets/images/InvalidArgumentAuthority.png)
 
 <br/>
 
@@ -138,7 +138,7 @@ If someone doesn't have a good reason to believe something other than ‘well X 
 My tactic when this all happens is to play the stupid card. I pretend I need it explained to me to force people to confront their assumptions, e.g. "Sorry, I'm not getting it; why are we doing it that way? What did TA see that made him think that?" and so on. Politely moving the conversation to the evidence and the facts takes the person out of it and foils the appeal to authority. Not easy when you're dealing with *egos* but it can be done with a bit of tact and kindness.
 
 ### Regression
-![A figure looking at a graph with a spike, assuming their actions caused the spike to go down.](/images/InvalidArgumentRegression.png)
+![A figure looking at a graph with a spike, assuming their actions caused the spike to go down.](../../assets/images/InvalidArgumentRegression.png)
 
 In this case we’re not talking about testing. The regression fallacy is when you assume that a return to normal after an abnormal event is caused by something you did, without any evidence to support that claim. It’s a common mistake to make when you’re trying to fix a problem and you see that the problem has gone away after you’ve done something. You might be tempted to say “I fixed it!” but without evidence that what you did actually fixed the problem, you can’t be sure.
 
@@ -155,7 +155,7 @@ Evidence is key here. I feel like a broken record at this point. Your evidence n
 One way to guard against this is to include a way of monitoring the problem as part of your fix, find a way to verify your assumptions with logs, measures or metrics. If you don't have the evidence yet, then how can you get it?
 
 ### False dilemmas
-![A figure looking at two wrong options and ignoring the correct one.](/images/InvalidArgumentFalseDilemma.png)
+![A figure looking at two wrong options and ignoring the correct one.](../../assets/images/InvalidArgumentFalseDilemma.png)
 
 Sometimes there are either-or situations, but sometimes that’s oversimplifying things. For example:
 ```

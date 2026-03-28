@@ -7,7 +7,7 @@ export default {
       colors: {
         // Monochrome with electric accents
         accent: {
-          cyan: '#00ffff',
+          cyan: 'rgb(var(--accent-cyan-rgb) / <alpha-value>)',
           green: '#00ff00',
           orange: '#ff6b35',
         },

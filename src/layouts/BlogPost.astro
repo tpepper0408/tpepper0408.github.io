@@ -58,14 +58,21 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-GB', 
       <slot />
     </div>
 
-    <!-- Back to posts link -->
-    <div class="mt-16 pt-8 border-t" style="border-color: var(--border);">
+    <!-- Back links -->
+    <div class="mt-16 pt-8 border-t flex flex-col gap-4" style="border-color: var(--border);">
+      <a 
+        href="/posts"
+        class="inline-flex items-center gap-2 font-mono text-sm hover:text-accent-cyan transition-colors"
+      >
+        <span class="text-accent-cyan">←</span>
+        cd ../posts
+      </a>
       <a 
         href="/"
         class="inline-flex items-center gap-2 font-mono text-sm hover:text-accent-cyan transition-colors"
       >
         <span class="text-accent-cyan">←</span>
-        cd ../posts
+        cd ..
       </a>
     </div>
   </article>

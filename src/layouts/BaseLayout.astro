@@ -32,8 +32,8 @@ const currentPath = Astro.url.pathname;
           
           <div class="flex items-center gap-8">
             <a 
-              href="/" 
-              class={`font-mono text-sm hover:text-accent-cyan transition-colors ${currentPath === '/' ? 'text-accent-cyan' : ''}`}
+              href="/posts" 
+              class={`font-mono text-sm hover:text-accent-cyan transition-colors ${currentPath.startsWith('/posts') ? 'text-accent-cyan' : ''}`}
             >
               ./posts
             </a>

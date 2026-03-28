@@ -1,0 +1,94 @@
+---
+import type { GetStaticPathsOptions, Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = await getCollection('blog');
+  const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  );
+  return paginate(sortedPosts, { pageSize: 10 });
+}
+
+interface Props {
+  page: Page<CollectionEntry<'blog'>>;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Posts — Pepper Headspace">
+  <div class="mb-12">
+    <h1 class="text-5xl font-display font-bold mb-4 leading-tight">Posts</h1>
+    <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
+      Thoughts on engineering, leadership, and learning.
+    </p>
+  </div>
+
+  <div class="space-y-6 mb-12">
+    {page.data.map((post: any) => {
+      const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-GB', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+      return (
+        <article class="group">
+          <a href={`/blog/${post.slug}`} class="block">
+            <div
+              class="border rounded-lg p-6 hover:border-accent-cyan hover-accent-glow transition-all duration-300"
+              style="border-color: var(--border);"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                <h2 class="text-xl font-display font-semibold group-hover:text-accent-cyan transition-colors">
+                  {post.data.title}
+                </h2>
+                <time
+                  datetime={post.data.pubDate.toISOString()}
+                  class="font-mono text-sm flex-shrink-0"
+                  style="color: var(--text-secondary);"
+                >
+                  {formattedDate}
+                </time>
+              </div>
+              <p class="mb-3" style="color: var(--text-secondary);">{post.data.description}</p>
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="flex flex-wrap gap-2">
+                  {post.data.tags.map((tag: string) => (
+                    <span
+                      class="px-2 py-1 text-xs font-mono rounded border"
+                      style="border-color: var(--border); color: var(--text-secondary);"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </a>
+        </article>
+      );
+    })}
+  </div>
+
+  <!-- Pagination controls -->
+  {(page.url.prev || page.url.next) && (
+    <nav class="flex items-center justify-between font-mono text-sm">
+      {page.url.prev ? (
+        <a href={page.url.prev} class="text-accent-cyan hover:underline">← Newer posts</a>
+      ) : (
+        <span />
+      )}
+      <span style="color: var(--text-secondary);">
+        Page {page.currentPage} of {page.lastPage}
+      </span>
+      {page.url.next ? (
+        <a href={page.url.next} class="text-accent-cyan hover:underline">Older posts →</a>
+      ) : (
+        <span />
+      )}
+    </nav>
+  )}
+</BaseLayout>
