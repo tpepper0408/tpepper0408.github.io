@@ -17,12 +17,13 @@ I catch myself in this moment more times than I care to admit and it immediately
 - Can I still call myself a hands-on engineer?
 - Am I still good enough to be leading a team?
 - Have I lost my edge?
+
 It's a tough pill to swallow, every time.
 
 <br/>
 
 It's a strange feeling - I can see what's wrong and I can guide my team to a solution. There's a quiet question underneath it all: **Would I be able to fix this myself if I had to?**
-The answer is yes, but not as quickly as I used to.
+The answer is yes, but not as quickly as I'd like.
 
 <br/>
 
@@ -113,9 +114,11 @@ Over time I've gotten really good at reading code and the activities that come a
 <br/>
 
 I think the best way to deal with that is to redefine what being hands-on means... it's about being
-- deeply involved in the technical work and having a strong understanding of the codebase
-- able to guide and mentor others, and to make informed decisions about the architecture and design of the system
-- a critical reader of code and being able to spot issues and improvements
+- a person that knows enough about the technical work that everyone is doing
+- the person with a deep understanding of the codebase
+- the person able to guide and mentor others
+- the person prepared to make informed decisions about the architecture and design of the system
+- a critical reader of code
 - a creative problem solver when things go wrong
 
 <br/>
