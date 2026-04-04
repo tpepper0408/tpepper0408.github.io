@@ -2,7 +2,7 @@
 title: "Philosophy and Software: Bad Arguments"
 description: "Part 2 of Philosophy and Software, turning to some of the bad arguments you might find in tech."
 pubDate: 2026-02-21
-tags: ["philosophy", "software-engineering", "digressions"]
+tags: ["philosophy", "software-engineering", "critical-thinking", "logic"]
 ---
 
 In my previous blog (see [Part 1](./2026-02-07-philosophy-and-software-sound-arguments)), I explained what a good argument looks like and explained the easiest way to make a bad argument (by having false premises). To recap there are two parts to a sound argument:

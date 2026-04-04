@@ -40,7 +40,7 @@ Watching myself write code in interview conditions made it very clear that a lot
 
 <br/>
 
-I had spent days preparing for the possibility of being embarrassed, for feeling out of my depth, and for approaching the test in an AI-first way — without really confronting the underlying issue that I was rusty at writing code. That realisation hit *hard* and pulled into focus something I had been feeling for a while.
+I had spent days preparing for the possibility of being embarrassed, for feeling out of my depth, and for approaching the test in an AI-first way - without really confronting the underlying issue that I was rusty at writing code. That realisation hit *hard* and pulled into focus something I had been feeling for a while.
 
 <br/>
 

@@ -2,7 +2,7 @@
 title: "Philosophy and Software: Sound Arguments"
 description: "Exploring the intersection of philosophy and software development through the lens of making sound arguments."
 pubDate: 2026-02-07
-tags: ["philosophy", "software-engineering", "digressions"]
+tags: ["philosophy", "software-engineering", "critical-thinking", "logic"]
 ---
 
 > The software engineer is condemned to be free; because once thrown into the world, they are responsible for everything they do. 
