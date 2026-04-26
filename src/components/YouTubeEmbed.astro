@@ -8,6 +8,12 @@ interface Props {
 
 const { url, id, title = 'YouTube video', start } = Astro.props as Props;
 
+const VIDEO_ID_PATTERN = /^[A-Za-z0-9_-]{11}$/;
+
+function isValidVideoId(value: string): boolean {
+  return VIDEO_ID_PATTERN.test(value);
+}
+
 function getVideoId(inputUrl?: string): string | undefined {
   if (!inputUrl) {
     return undefined;
@@ -17,21 +23,28 @@ function getVideoId(inputUrl?: string): string | undefined {
     const parsed = new URL(inputUrl);
     const hostname = parsed.hostname.toLowerCase();
     const shortHosts = new Set(['youtu.be', 'www.youtu.be']);
-    const youtubeHosts = new Set(['youtube.com', 'www.youtube.com', 'm.youtube.com']);
+    const youtubeHosts = new Set([
+      'youtube.com',
+      'www.youtube.com',
+      'm.youtube.com',
+      'youtube-nocookie.com',
+      'www.youtube-nocookie.com',
+    ]);
 
     if (shortHosts.has(hostname)) {
-      return parsed.pathname.slice(1) || undefined;
+      const firstSegment = parsed.pathname.split('/').filter(Boolean)[0];
+      return firstSegment && isValidVideoId(firstSegment) ? firstSegment : undefined;
     }
 
     if (youtubeHosts.has(hostname)) {
       const fromQuery = parsed.searchParams.get('v');
-      if (fromQuery) {
+      if (fromQuery && isValidVideoId(fromQuery)) {
         return fromQuery;
       }
 
-      const embedMatch = parsed.pathname.match(/\/embed\/([^/?#]+)/);
-      if (embedMatch?.[1]) {
-        return embedMatch[1];
+      const pathMatch = parsed.pathname.match(/\/(?:embed|shorts|live)\/([^/?#]+)/);
+      if (pathMatch?.[1] && isValidVideoId(pathMatch[1])) {
+        return pathMatch[1];
       }
     }
   } catch {
@@ -41,7 +54,13 @@ function getVideoId(inputUrl?: string): string | undefined {
   return undefined;
 }
 
-const videoId = id ?? getVideoId(url);
+const trimmedId = typeof id === 'string' ? id.trim() : undefined;
+
+if (trimmedId && !isValidVideoId(trimmedId)) {
+  throw new Error('YouTubeEmbed `id` must be a valid 11-character YouTube video ID.');
+}
+
+const videoId = trimmedId ?? getVideoId(url);
 
 if (!videoId) {
   throw new Error('YouTubeEmbed requires either a valid `id` or a valid YouTube `url` prop.');
@@ -68,6 +87,7 @@ const embedSrc = `https://www.youtube-nocookie.com/embed/${videoId}?${params.toS
     title={title}
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"
     allowfullscreen
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
