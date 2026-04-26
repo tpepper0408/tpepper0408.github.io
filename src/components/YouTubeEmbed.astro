@@ -15,12 +15,15 @@ function getVideoId(inputUrl?: string): string | undefined {
 
   try {
     const parsed = new URL(inputUrl);
+    const hostname = parsed.hostname.toLowerCase();
+    const shortHosts = new Set(['youtu.be', 'www.youtu.be']);
+    const youtubeHosts = new Set(['youtube.com', 'www.youtube.com', 'm.youtube.com']);
 
-    if (parsed.hostname.includes('youtu.be')) {
+    if (shortHosts.has(hostname)) {
       return parsed.pathname.slice(1) || undefined;
     }
 
-    if (parsed.hostname.includes('youtube.com')) {
+    if (youtubeHosts.has(hostname)) {
       const fromQuery = parsed.searchParams.get('v');
       if (fromQuery) {
         return fromQuery;
@@ -49,8 +52,11 @@ const params = new URLSearchParams({
   modestbranding: '1',
 });
 
-if (typeof start === 'number' && start > 0) {
-  params.set('start', String(Math.floor(start)));
+if (typeof start === 'number' && Number.isFinite(start)) {
+  const safeStart = Math.min(Math.floor(start), 2147483647);
+  if (safeStart > 0) {
+    params.set('start', String(safeStart));
+  }
 }
 
 const embedSrc = `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
