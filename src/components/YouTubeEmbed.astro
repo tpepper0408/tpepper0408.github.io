@@ -1,0 +1,87 @@
+---
+interface Props {
+  url?: string;
+  id?: string;
+  title?: string;
+  start?: number;
+}
+
+const { url, id, title = 'YouTube video', start } = Astro.props as Props;
+
+function getVideoId(inputUrl?: string): string | undefined {
+  if (!inputUrl) {
+    return undefined;
+  }
+
+  try {
+    const parsed = new URL(inputUrl);
+
+    if (parsed.hostname.includes('youtu.be')) {
+      return parsed.pathname.slice(1) || undefined;
+    }
+
+    if (parsed.hostname.includes('youtube.com')) {
+      const fromQuery = parsed.searchParams.get('v');
+      if (fromQuery) {
+        return fromQuery;
+      }
+
+      const embedMatch = parsed.pathname.match(/\/embed\/([^/?#]+)/);
+      if (embedMatch?.[1]) {
+        return embedMatch[1];
+      }
+    }
+  } catch {
+    return undefined;
+  }
+
+  return undefined;
+}
+
+const videoId = id ?? getVideoId(url);
+
+if (!videoId) {
+  throw new Error('YouTubeEmbed requires either a valid `id` or a valid YouTube `url` prop.');
+}
+
+const params = new URLSearchParams({
+  rel: '0',
+  modestbranding: '1',
+});
+
+if (typeof start === 'number' && start > 0) {
+  params.set('start', String(Math.floor(start)));
+}
+
+const embedSrc = `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
+---
+
+<div class="youtube-embed">
+  <iframe
+    src={embedSrc}
+    title={title}
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
+</div>
+
+<style>
+  .youtube-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .youtube-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
