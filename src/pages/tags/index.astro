@@ -1,18 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { aggregateTags } from '../../utils/tags.ts';
 
 const allPosts = await getCollection('blog');
-
-// Get all unique tags with post counts
-const tagCounts = allPosts.reduce((acc, post) => {
-  post.data.tags?.forEach((tag: string) => {
-    acc[tag] = (acc[tag] || 0) + 1;
-  });
-  return acc;
-}, {} as Record<string, number>);
-
-const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
+const sortedTags = aggregateTags(allPosts);
 ---
 
 <BaseLayout title="Tags">
@@ -34,7 +26,7 @@ const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
 
   {sortedTags.length > 0 ? (
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {sortedTags.map(([tag, count]) => (
+      {sortedTags.map(({ tag, count }) => (
         <a 
           href={`/tags/${tag}`}
           class="group block border rounded-lg p-6 hover:border-accent-cyan hover-accent-glow transition-all duration-300"
