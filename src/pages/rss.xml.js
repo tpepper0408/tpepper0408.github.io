@@ -5,7 +5,8 @@ export async function GET(context) {
   const posts = await getCollection('blog');
   return rss({
     title: 'Pepper Headspace',
-    description: 'Reflections on technical leadership, building inclusive teams, and navigating the world of software consultancy.',
+    description:
+      'Reflections on technical leadership, building inclusive teams, and navigating the world of software consultancy.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

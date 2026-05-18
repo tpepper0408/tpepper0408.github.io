@@ -17,23 +17,26 @@ A thoughtful, personal blog exploring technical leadership, inclusive team build
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn or pnpm
 
 ### Installation
 
 1. Clone this repository:
+
 ```bash
 git clone git@github.com:tpepper0408/tpepper0408.github.io.git
 cd tpepper0408.github.io
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -49,10 +52,10 @@ Creating a new blog post is simple:
 
 ```markdown
 ---
-title: "Your Post Title"
-description: "A brief description of your post"
+title: 'Your Post Title'
+description: 'A brief description of your post'
 pubDate: 2024-02-15
-tags: ["tag1", "tag2"]
+tags: ['tag1', 'tag2']
 ---
 
 Your content here...
@@ -96,9 +99,8 @@ function greet(name: string): string {
 Edit `src/pages/about.astro` and replace the placeholder links:
 
 ```astro
-- Email: your.email@example.com
-- LinkedIn: linkedin.com/in/yourprofile  
-- GitHub: github.com/yourhandle
+- Email: your.email@example.com - LinkedIn: linkedin.com/in/yourprofile -
+GitHub: github.com/yourhandle
 ```
 
 ### Updating Site URL

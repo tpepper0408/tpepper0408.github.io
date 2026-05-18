@@ -2,14 +2,14 @@ import { describe, it, expect } from 'vitest';
 import { aggregateTags } from '../utils/tags.ts';
 
 const makePosts = (tagSets: (string[] | undefined)[]) =>
-  tagSets.map(tags => ({ data: { tags } }));
+  tagSets.map((tags) => ({ data: { tags } }));
 
 describe('aggregateTags', () => {
   it('counts tags across multiple posts', () => {
     const posts = makePosts([['a', 'b'], ['a']]);
     const result = aggregateTags(posts);
-    expect(result.find(t => t.tag === 'a')?.count).toBe(2);
-    expect(result.find(t => t.tag === 'b')?.count).toBe(1);
+    expect(result.find((t) => t.tag === 'a')?.count).toBe(2);
+    expect(result.find((t) => t.tag === 'b')?.count).toBe(1);
   });
 
   it('sorts by count descending', () => {

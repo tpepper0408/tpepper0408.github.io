@@ -16,20 +16,24 @@ This guide will walk you through setting up your blog and deploying it to GitHub
 Before pushing, update these files with your information:
 
 #### `astro.config.mjs`
+
 ```javascript
 site: 'https://yourusername.github.io', // Your actual GitHub Pages URL
 ```
 
 #### `README.md`
+
 - Replace `yourusername` with your GitHub username
 - Update contact information
 - Customize the description
 
 #### `src/layouts/BaseLayout.astro`
+
 - Update the site title (currently `>_dev.log`)
 - Update footer links
 
 #### `src/pages/about.astro`
+
 - Add your bio and information
 - Update contact links
 

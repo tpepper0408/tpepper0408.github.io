@@ -2,7 +2,7 @@
 title: "You Can't Measure What You Can't Feel: Returning to DevEx"
 description: "DevEx is too abstract. It's not about metrics, it's about how it actually feels to use your tools."
 pubDate: 2026-04-12
-tags: ["return-to-engineering", "developer-experience", "engineering-craft"]
+tags: ['return-to-engineering', 'developer-experience', 'engineering-craft']
 ---
 
 This post is part of the [Return to Engineering](/tags/return-to-engineering) series, where I share my journey of returning to hands-on software engineering.
@@ -17,14 +17,15 @@ It was supposed to be a fun exercise, small problems in a language I know well. 
 
 <br/>
 
-I wanted to extract a variable and my fingers froze. I couldn't remember the shortcut. I pressed the wrong keys. IDEA did something I didn't expect. I undid it. I looked up the shortcut but then forgot a couple of times. 
+I wanted to extract a variable and my fingers froze. I couldn't remember the shortcut. I pressed the wrong keys. IDEA did something I didn't expect. I undid it. I looked up the shortcut but then forgot a couple of times.
 
 <br/>
 
 I wasn't solving the kata, I was fighting my own tools. The IDE and keyboard were suddenly conspicuous and I wasn't thinking about the problem anymore.
 
 ## Bracketing Experience
-You can't feel another person's experience, but you can get closer than metrics ever will by using *bracketing*. This means setting aside preconceived notions and trying to understand the experience as it is without trying to judge or measure it.
+
+You can't feel another person's experience, but you can get closer than metrics ever will by using _bracketing_. This means setting aside preconceived notions and trying to understand the experience as it is without trying to judge or measure it.
 
 <br/>
 
@@ -39,12 +40,15 @@ For example: When I play the piano, the moment I think about my fingers, the mus
 Coding is no different. Here are some experiences that might feel familiar.
 
 ### Renaming
+
 I want to rename a variable, I press the buttons but it doesn't work, I'm not sure why. I resort to find/replace. I feel like I might have missed a reference. I spend extra time reading through the changes. The short activity of renaming has turned into 5 minutes. I have forgotten what I was doing.
 
 ### Following references
+
 I want to find out how a method is implemented. I click on the method name and it takes me to the interface, not the implementation. I can't figure out the shortcut to see it. I've now got many tabs open and I have to navigate between them to build up my mental model of the code. I'm lost and I've spent 10 minutes reading irrelevant code.
 
 ### Review Feedback
+
 I submit a PR, I'm nervous about it. I can't make sense of some comments made on the PR. I send them a message to ask for clarification and they don't respond for a few hours. I work on a different task while I wait, and when they finally respond, I don't understand what they want from me. I've now got three tasks on my plate and this PR is hanging over me.
 
 ## Stepping Back
@@ -53,7 +57,7 @@ I submit a PR, I'm nervous about it. I can't make sense of some comments made on
 
 <br/>
 
-I've used metrics like *cycle time*, *lead time*, *build times* and so on. I've also used qualitative feedback, usually to find trends. It doesn't capture what I'm talking about. What about the feeling of frustration when you have to wait for a build to finish before you can test something? Or the feeling of never being able to finish a piece of work because flaky tests keep popping up? What about being forced to use a tool that doesn't work for you? 
+I've used metrics like _cycle time_, _lead time_, _build times_ and so on. I've also used qualitative feedback, usually to find trends. It doesn't capture what I'm talking about. What about the feeling of frustration when you have to wait for a build to finish before you can test something? Or the feeling of never being able to finish a piece of work because flaky tests keep popping up? What about being forced to use a tool that doesn't work for you?
 
 <br/>
 
@@ -61,7 +65,7 @@ I've used metrics like *cycle time*, *lead time*, *build times* and so on. I've 
 
 <br/>
 
-I found myself trying to capture this by asking my team to rate their experience with our tools. I thought this would give me a good sense of the friction they may be feeling but it was still too abstract. 
+I found myself trying to capture this by asking my team to rate their experience with our tools. I thought this would give me a good sense of the friction they may be feeling but it was still too abstract.
 
 <br/>
 
@@ -81,11 +85,12 @@ I need to give actual experiences the room to breathe without trying to judge or
 
 <br/>
 
-I think the true measure of good tooling and good DevEx is how invisible the tooling is for you, as an engineer. It has to be grounded in the lived experience of writing code. The scale is from invisible (*ready-to-hand*) to obvious (*present-at-hand*). Good tools disappear, bad tools become the thing you think about.
+I think the true measure of good tooling and good DevEx is how invisible the tooling is for you, as an engineer. It has to be grounded in the lived experience of writing code. The scale is from invisible (_ready-to-hand_) to obvious (_present-at-hand_). Good tools disappear, bad tools become the thing you think about.
 
 <br/>
 
 Asking more nuanced questions about tooling may help us try to measure the experience without trying to quantify it. For example:
+
 - How often do you feel like your IDE is getting in your way?
 - What causes you to get distracted?
 - When did you last feel like you were in a flow state and what were you doing?
@@ -100,10 +105,11 @@ Engineers try to solve friction all the time - I know a lot of developers with u
 
 <br/>
 
-Asking how **ready-to-hand** the experience is for your team is a much more immediate way to understand how good your DevEx is. 
+Asking how **ready-to-hand** the experience is for your team is a much more immediate way to understand how good your DevEx is.
 
 ## The Craft of DevEx
-When it comes to solving sources of inefficiency, I got more insight from an hour of writing code than weeks of looking at metrics. When developers complain about their tools, they are highlighting friction. Somehow I forgot this by getting caught up in abstract measures. *I knew all this and I forgot it.*
+
+When it comes to solving sources of inefficiency, I got more insight from an hour of writing code than weeks of looking at metrics. When developers complain about their tools, they are highlighting friction. Somehow I forgot this by getting caught up in abstract measures. _I knew all this and I forgot it._
 
 <br/>
 

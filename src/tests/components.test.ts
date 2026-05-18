@@ -23,7 +23,10 @@ describe('YouTubeEmbed component', () => {
   it('uses the provided title on the iframe', async () => {
     const container = await AstroContainer.create();
     const html = await container.renderToString(YouTubeEmbed, {
-      props: { url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', title: 'My video' },
+      props: {
+        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        title: 'My video',
+      },
     });
     expect(html).toContain('title="My video"');
   });

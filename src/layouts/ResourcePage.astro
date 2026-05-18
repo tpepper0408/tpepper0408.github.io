@@ -8,9 +8,7 @@ interface Frontmatter {
   backLabel?: string;
 }
 
-const {
-  frontmatter,
-} = Astro.props as {
+const { frontmatter } = Astro.props as {
   frontmatter: Frontmatter;
 };
 
@@ -33,14 +31,19 @@ const {
         {title}
       </h1>
 
-      {description && (
-        <p class="text-lg max-w-3xl" style="color: var(--text-secondary);">
-          {description}
-        </p>
-      )}
+      {
+        description && (
+          <p class="text-lg max-w-3xl" style="color: var(--text-secondary);">
+            {description}
+          </p>
+        )
+      }
     </div>
 
-    <div class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-12 opacity-30"></div>
+    <div
+      class="h-px bg-gradient-to-r from-transparent via-accent-cyan to-transparent mb-12 opacity-30"
+    >
+    </div>
 
     <div class="resource-content">
       <slot />
@@ -76,6 +79,11 @@ const {
 
   .resource-content hr {
     @apply my-8 border-0 h-px;
-    background: linear-gradient(to right, transparent, var(--border), transparent);
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--border),
+      transparent
+    );
   }
- </style>
+</style>

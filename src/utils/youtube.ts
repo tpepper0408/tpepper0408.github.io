@@ -21,14 +21,18 @@ export function getVideoId(inputUrl?: string): string | undefined {
 
     if (shortHosts.has(hostname)) {
       const firstSegment = parsed.pathname.split('/').filter(Boolean)[0];
-      return firstSegment && isValidVideoId(firstSegment) ? firstSegment : undefined;
+      return firstSegment && isValidVideoId(firstSegment)
+        ? firstSegment
+        : undefined;
     }
 
     if (youtubeHosts.has(hostname)) {
       const fromQuery = parsed.searchParams.get('v');
       if (fromQuery && isValidVideoId(fromQuery)) return fromQuery;
 
-      const pathMatch = parsed.pathname.match(/\/(?:embed|shorts|live)\/([^/?#]+)/);
+      const pathMatch = parsed.pathname.match(
+        /\/(?:embed|shorts|live)\/([^/?#]+)/
+      );
       if (pathMatch?.[1] && isValidVideoId(pathMatch[1])) return pathMatch[1];
     }
   } catch {
@@ -42,13 +46,17 @@ export function resolveVideoId(url?: string, id?: string): string {
   const trimmedId = typeof id === 'string' ? id.trim() : undefined;
 
   if (trimmedId && !isValidVideoId(trimmedId)) {
-    throw new Error('YouTubeEmbed `id` must be a valid 11-character YouTube video ID.');
+    throw new Error(
+      'YouTubeEmbed `id` must be a valid 11-character YouTube video ID.'
+    );
   }
 
   const videoId = trimmedId ?? getVideoId(url);
 
   if (!videoId) {
-    throw new Error('YouTubeEmbed requires either a valid `id` or a valid YouTube `url` prop.');
+    throw new Error(
+      'YouTubeEmbed requires either a valid `id` or a valid YouTube `url` prop.'
+    );
   }
 
   return videoId;

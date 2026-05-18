@@ -30,7 +30,9 @@ describe('isValidVideoId', () => {
 
 describe('getVideoId', () => {
   it('extracts ID from a standard watch URL', () => {
-    expect(getVideoId('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ');
+    expect(getVideoId('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).toBe(
+      'dQw4w9WgXcQ'
+    );
   });
 
   it('extracts ID from a youtu.be short URL', () => {
@@ -38,15 +40,21 @@ describe('getVideoId', () => {
   });
 
   it('extracts ID from an /embed/ path', () => {
-    expect(getVideoId('https://www.youtube.com/embed/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ');
+    expect(getVideoId('https://www.youtube.com/embed/dQw4w9WgXcQ')).toBe(
+      'dQw4w9WgXcQ'
+    );
   });
 
   it('extracts ID from a /shorts/ path', () => {
-    expect(getVideoId('https://www.youtube.com/shorts/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ');
+    expect(getVideoId('https://www.youtube.com/shorts/dQw4w9WgXcQ')).toBe(
+      'dQw4w9WgXcQ'
+    );
   });
 
   it('extracts ID from a /live/ path', () => {
-    expect(getVideoId('https://www.youtube.com/live/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ');
+    expect(getVideoId('https://www.youtube.com/live/dQw4w9WgXcQ')).toBe(
+      'dQw4w9WgXcQ'
+    );
   });
 
   it('returns undefined for a non-YouTube URL', () => {
@@ -72,11 +80,15 @@ describe('resolveVideoId', () => {
   });
 
   it('prefers the id prop over the url prop', () => {
-    expect(resolveVideoId('https://youtu.be/aaaaaaaaaaa', 'dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ');
+    expect(resolveVideoId('https://youtu.be/aaaaaaaaaaa', 'dQw4w9WgXcQ')).toBe(
+      'dQw4w9WgXcQ'
+    );
   });
 
   it('throws when id is provided but invalid', () => {
-    expect(() => resolveVideoId(undefined, 'bad')).toThrow('valid 11-character');
+    expect(() => resolveVideoId(undefined, 'bad')).toThrow(
+      'valid 11-character'
+    );
   });
 
   it('throws when neither url nor id resolve to a valid ID', () => {

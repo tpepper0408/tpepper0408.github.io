@@ -3,10 +3,12 @@ export interface TagCount {
   count: number;
 }
 
-export function aggregateTags(posts: Array<{ data: { tags?: string[] } }>): TagCount[] {
+export function aggregateTags(
+  posts: Array<{ data: { tags?: string[] } }>
+): TagCount[] {
   const counts: Record<string, number> = {};
   for (const post of posts) {
-    post.data.tags?.forEach(tag => {
+    post.data.tags?.forEach((tag) => {
       counts[tag] = (counts[tag] || 0) + 1;
     });
   }

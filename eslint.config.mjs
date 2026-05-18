@@ -7,5 +7,5 @@ export default tseslint.config(
   ...astro.configs['flat/jsx-a11y-recommended'],
   {
     ignores: ['dist/**', 'node_modules/**', '.astro/**', 'src/env.d.ts'],
-  },
+  }
 );
