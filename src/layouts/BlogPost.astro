@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, readingTime } = Astro.props;
 const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-GB', {
   year: 'numeric',
   month: 'long',
@@ -25,7 +25,9 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-GB', 
         <time datetime={frontmatter.pubDate}>
           {formattedDate}
         </time>
-        
+
+        <span>{readingTime} min read</span>
+
         {frontmatter.tags && (
           <div class="flex gap-2">
             {frontmatter.tags.map((tag: string) => (
