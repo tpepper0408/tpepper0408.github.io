@@ -21,6 +21,7 @@ Game Night Organiser is a lightweight web application that helps a regular group
 The app is accessed via a **shared group link**, meaning anyone with the link can participate straight away. The goal is to remove the friction of organising a game night: no more group chats trying to agree on a date, no more arguing about what to play, and no more forgetting who won last time.
 
 ### Goals
+
 - Make scheduling a game night fast and painless
 - Give everyone in the group a voice in choosing what to play
 - Keep a fun, lasting record of results and achievements
@@ -32,6 +33,7 @@ The app is accessed via a **shared group link**, meaning anyone with the link ca
 **Primary users:** All members of a regular, recurring friend group who play board games, card games, or similar together.
 
 **Key characteristics:**
+
 - They already know each other — this is not a discovery or matchmaking app
 - They want something quick and easy to use, not a complex tool
 - They will access the app mostly on their phones, but also on laptops
@@ -48,6 +50,7 @@ The app is accessed via a **shared group link**, meaning anyone with the link ca
 The app requires no account creation or login. A group is created once and given a unique shareable URL. Anyone with the link can access the group and participate fully.
 
 **Behaviour:**
+
 - A new group can be created from the homepage, generating a unique link
 - Any member can share the link with others to invite them
 - On first visit, a user enters their name to identify themselves within the group
@@ -63,6 +66,7 @@ The app requires no account creation or login. A group is created once and given
 When a game night is being planned, members submit the dates they are available. The app analyses responses and recommends the date that works for the most people.
 
 **Behaviour:**
+
 - Any member can open a new scheduling round and propose a set of candidate dates
 - All members are prompted to mark which dates they can attend
 - Once responses are in (or a deadline is reached), the app highlights the best date — the one with the highest attendance
@@ -78,6 +82,7 @@ When a game night is being planned, members submit the dates they are available.
 Before each game night, members can suggest games they'd like to play and vote on the shortlist.
 
 **Behaviour:**
+
 - Any member can nominate a game by entering its name
 - All members can cast a vote for one or more suggested games
 - Votes are tallied in real time and displayed as a ranked list
@@ -93,6 +98,7 @@ Before each game night, members can suggest games they'd like to play and vote o
 After each game night, results are logged against the session. This builds up a history of past nights.
 
 **Behaviour:**
+
 - The host (or any member) can record results for a completed session
 - The following information is recorded per session:
   - **Game played** — name of the game
@@ -106,12 +112,13 @@ After each game night, results are logged against the session. This builds up a 
 
 ---
 
-### 3.5 Leaderboard *(Nice-to-have)*
+### 3.5 Leaderboard _(Nice-to-have)_
 
 **Description:**  
 A running leaderboard showing all-time stats across the group, updated after each game night.
 
 **Behaviour:**
+
 - Displays a ranked list of all players based on wins or points
 - May include additional stats such as: total games played, win rate, MVP awards
 - Visible to all group members at any time
@@ -124,14 +131,14 @@ A running leaderboard showing all-time stats across the group, updated after eac
 
 The following features are explicitly excluded from the first version to keep scope manageable:
 
-| Feature | Reason |
-|---|---|
-| User accounts / login | Replaced by shared link access |
-| Notifications or reminders | Adds complexity; not essential for v1 |
-| In-app chat or comments | Out of scope for MVP |
-| Multiple groups per user | Single group link model for now |
-| Game library / database integration | Users type game names manually |
-| Mobile native app (iOS/Android) | Web app only; mobile-friendly design covers this need |
+| Feature                             | Reason                                                |
+| ----------------------------------- | ----------------------------------------------------- |
+| User accounts / login               | Replaced by shared link access                        |
+| Notifications or reminders          | Adds complexity; not essential for v1                 |
+| In-app chat or comments             | Out of scope for MVP                                  |
+| Multiple groups per user            | Single group link model for now                       |
+| Game library / database integration | Users type game names manually                        |
+| Mobile native app (iOS/Android)     | Web app only; mobile-friendly design covers this need |
 
 ---
 
@@ -147,4 +154,4 @@ The product will be considered successful if:
 
 ---
 
-*End of Product Specification v1.0*
+_End of Product Specification v1.0_

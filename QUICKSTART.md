@@ -3,26 +3,30 @@
 ## Creating Your First Post
 
 1. **Create a new file** in `src/content/blog/`:
+
    ```bash
    touch src/content/blog/my-new-post.md
    ```
 
 2. **Add frontmatter** (the metadata at the top):
+
    ```markdown
    ---
-   title: "My Awesome Post"
-   description: "A short description that appears in previews and search results"
+   title: 'My Awesome Post'
+   description: 'A short description that appears in previews and search results'
    pubDate: 2024-02-15
-   tags: ["javascript", "tutorial"]
+   tags: ['javascript', 'tutorial']
    ---
    ```
 
 3. **Write your content** below the frontmatter in Markdown
 
 4. **Preview locally**:
+
    ```bash
    npm run dev
    ```
+
    Then open http://localhost:4321
 
 5. **Deploy**:
@@ -38,8 +42,8 @@
 - `title`: **Required** - The title of your post
 - `description`: **Required** - Used for SEO and post previews (keep it under 160 characters)
 - `pubDate`: **Required** - Publication date in YYYY-MM-DD format
-- `tags`: *Optional* - Array of tags (use lowercase, hyphenated words)
-- `draft`: *Optional* - Set to `true` to prevent publishing (default: false)
+- `tags`: _Optional_ - Array of tags (use lowercase, hyphenated words)
+- `draft`: _Optional_ - Set to `true` to prevent publishing (default: false)
 
 ## Markdown Tips
 
@@ -71,7 +75,9 @@ console.log('Hello, world!');
 
 ```markdown
 ## H2 Heading
+
 ### H3 Heading
+
 #### H4 Heading
 ```
 
@@ -85,7 +91,7 @@ Set `draft: true` in frontmatter to work on it without publishing:
 
 ```markdown
 ---
-title: "Work in Progress"
+title: 'Work in Progress'
 draft: true
 ...
 ---
