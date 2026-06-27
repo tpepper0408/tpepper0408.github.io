@@ -4,6 +4,10 @@ import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
+function toBlogSlug(id: string): string {
+  return id.replace(/\.(md|mdx)$/u, '');
+}
+
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection('blog');
   const sortedPosts = allPosts.sort(
@@ -41,7 +45,7 @@ const { page } = Astro.props;
         );
         return (
           <article class="group">
-            <a href={`/blog/${post.slug}`} class="block">
+            <a href={`/blog/${toBlogSlug(post.id)}`} class="block">
               <div
                 class="border rounded-lg p-6 hover:border-accent-cyan hover-accent-glow transition-all duration-300"
                 style="border-color: var(--border);"

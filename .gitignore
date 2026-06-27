@@ -27,3 +27,6 @@ pnpm-debug.log*
 *.swp
 *.swo
 *~
+
+# AI assistant context
+.claude/

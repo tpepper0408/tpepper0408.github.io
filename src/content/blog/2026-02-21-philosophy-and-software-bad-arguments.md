@@ -5,7 +5,7 @@ pubDate: 2026-02-21
 tags: ['philosophy', 'software-engineering', 'critical-thinking', 'logic']
 ---
 
-In my previous blog (see [Part 1](./2026-02-07-philosophy-and-software-sound-arguments)), I explained what a good argument looks like and explained the easiest way to make a bad argument (by having false premises). To recap there are two parts to a sound argument:
+In my previous blog (see [Part 1](/blog/2026-02-07-philosophy-and-software-sound-arguments/)), I explained what a good argument looks like and explained the easiest way to make a bad argument (by having false premises). To recap there are two parts to a sound argument:
 
 - Has true premises
 - Has a conclusion which follows from those premises (a valid structure)
