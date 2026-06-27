@@ -14,7 +14,12 @@ const testsDir = path.dirname(testFilePath);
 const projectRoot = path.resolve(testsDir, '..', '..');
 const blogDir = path.resolve(projectRoot, 'src', 'content', 'blog');
 const publicDir = path.resolve(projectRoot, 'public');
-const resourcesPagesDir = path.resolve(projectRoot, 'src', 'pages', 'resources');
+const resourcesPagesDir = path.resolve(
+  projectRoot,
+  'src',
+  'pages',
+  'resources'
+);
 
 const markdownLinkPattern = /!??\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
 const htmlAttributePattern = /\b(?:href|src)=['"]([^'"]+)['"]/g;
@@ -140,7 +145,8 @@ const buildValidRoutes = (files: string[]): Set<string> => {
 };
 
 const resolveRelativeRoute = (target: string, sourceRoute: string): string => {
-  const resolved = new URL(target, `https://example.test${sourceRoute}`).pathname;
+  const resolved = new URL(target, `https://example.test${sourceRoute}`)
+    .pathname;
   return normalizeRoute(resolved);
 };
 
@@ -170,7 +176,10 @@ describe('blog content internal links', () => {
             continue;
           }
 
-          const publicCandidate = path.join(publicDir, target.replace(/^\//, ''));
+          const publicCandidate = path.join(
+            publicDir,
+            target.replace(/^\//, '')
+          );
           if (fs.existsSync(publicCandidate)) {
             continue;
           }
