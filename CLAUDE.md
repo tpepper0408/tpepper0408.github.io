@@ -27,9 +27,9 @@ Any feature change or new utility must include tests in `src/tests/` with suffic
 
 ## Architecture
 
-Personal blog for Tim Pepper (tpepper.dev), built with Astro 5 + Tailwind CSS. Deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `main`. PRs run `npm run ci` via `.github/workflows/pr-checks.yml`.
+Personal blog for Tim Pepper (tpepper.dev), built with Astro 7 + Tailwind CSS. Deployed to GitHub Pages via `.github/workflows/deploy.yml` on push to `main`. PRs run `npm run ci` via `.github/workflows/pr-checks.yml`.
 
-**Content** lives in `src/content/blog/` as `.md` or `.mdx` files. The collection schema (`src/content/config.ts`) requires `title`, `description`, `pubDate`; optional `tags` (string array) and `draft` (boolean, defaults false). Blog posts are served at `/blog/[slug]`.
+**Content** lives in `src/content/blog/` as `.md` or `.mdx` files. The collection schema (`src/content.config.ts`) requires `title`, `description`, `pubDate`; optional `tags` (string array). Blog posts are served at `/blog/[slug]`.
 
 **Routing:**
 - `/` — homepage with 3 latest posts
@@ -45,7 +45,7 @@ Personal blog for Tim Pepper (tpepper.dev), built with Astro 5 + Tailwind CSS. D
 
 **Components:** `YouTubeEmbed.astro` accepts either a `url` (full YouTube URL) or `id` prop, plus optional `title` and `start` (seconds). Uses `src/utils/youtube.ts` for URL parsing.
 
-**Utilities** (`src/utils/`): `readingTime.ts`, `tags.ts` (aggregates tag counts from posts), `youtube.ts` (resolves video IDs and builds embed URLs). All utilities have corresponding tests in `src/tests/`.
+**Utilities** (`src/utils/`): `blog.ts` (`toBlogSlug` maps a content-layer entry `id` to its `/blog/[slug]` route — always use it rather than re-deriving the slug, and note there is no `slug` property on entries; plus `sortPostsByDate` and `buildFeedItems` for the RSS feed), `readingTime.ts`, `tags.ts` (aggregates tag counts from posts), `youtube.ts` (resolves video IDs and builds embed URLs). All utilities have corresponding tests in `src/tests/`.
 
 **Styling:** Tailwind with custom CSS variables in `src/styles/global.css`. Uses CSS variables like `--border`, `--text-secondary`, `--accent-cyan` for theming. Dark mode is default, toggled via `localStorage` with the `dark` class on `<html>`.
 
