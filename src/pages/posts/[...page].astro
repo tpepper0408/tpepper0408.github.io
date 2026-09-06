@@ -3,10 +3,7 @@ import type { GetStaticPathsOptions, Page } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-
-function toBlogSlug(id: string): string {
-  return id.replace(/\.(md|mdx)$/u, '');
-}
+import { toBlogSlug } from '../../utils/blog.ts';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection('blog');

@@ -11,7 +11,5 @@ export default defineConfig({
       theme: 'github-dark',
       wrap: true,
     },
-    gfm: true,
-    smartypants: true,
   },
 });
